@@ -1,7 +1,58 @@
 {
-  "files": [],
+  "compilerOptions": {
+    /** Compile JavaScript code to the latest version */
+    "target": "ESNext",
+    /** Introducing the latest features of ES and type definitions of DOM interfaces */
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    /** Package compiled files using ES Module format */
+    "module": "ESNext",
+    /** Skip type checking on .d.ts files */
+    "skipLibCheck": true,
+    /** The base path of the query */
+    "baseUrl": ".",
+    /** Path mapping, used with aliases */
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Bundler mode */
+
+    /** Use Bundler (e.g. Vite, Webpack) to parse modules */
+    "moduleResolution": "Bundler",
+    /** Allow Typescript file extensions (.ts) to be used in module import statements */
+    "allowImportingTsExtensions": true,
+    /** Disallows the use of JS imports. */
+    "allowJs": false,
+    /** Allow importing JSON files */
+    "resolveJsonModule": true,
+    /** All files are required to be ES Module modules. */
+    "isolatedModules": true,
+    /** no js files will be generated after compilation */
+    "noEmit": true,
+    /** Convert JSX code to normal JavaScript code */
+    "jsx": "react-jsx",
+    /** Allows importing using import and exporting using export */
+    "esModuleInterop": true,
+
+    /* Linting */
+
+    /** Enable all strict type checking */
+    "strict": true,
+    /** Inconsistently formatted references to the same file are not allowed */
+    "forceConsistentCasingInFileNames": true,
+    /** Report errors for unused local variables */
+    "noUnusedLocals": true,
+    /** Report errors for unused arguments in functions */
+    "noUnusedParameters": true,
+    /** Make sure any non-null case in the switch statement contains */
+    "noFallthroughCasesInSwitch": true
+  },
+  /** Files to be checked */
+  "include": ["src"],
+  /** Different configurations for files */
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }

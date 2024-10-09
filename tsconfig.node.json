@@ -1,24 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    /** Enable incremental compilation to improve compilation speed for large projects */
     "composite": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    /** Skip type checking of all declaration files, reducing compilation time */
+    "skipLibCheck": true,
+    /** Specify the module system as ESNext to support modern ES modules */
+    "module": "ESNext",
+    /** Use Bundler (e.g. Vite, Webpack) to parse modules */
+    "moduleResolution": "Bundler",
+    /** Allow default import from modules that do not have default exports to facilitate processing of modules that do not comply with ES standards */
+    "allowSyntheticDefaultImports": true
   },
+  /** Specify files or directories to include in the compilation process */
   "include": ["vite.config.ts"]
 }
